@@ -20,4 +20,5 @@ int main()
   {
     cout<<"Fail to allocate memory for Foo object!"<endl;
   }
+  delete foo;
 }
