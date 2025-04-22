@@ -1,0 +1,38 @@
+language: "en-US"
+early_access: false
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false
+  instructions: >-
+    # Code Review Instructions
+
+    - Ensure code follows best practices and coding standards.
+    - For **CPP** code, follow 
+      basic cpp programming standard
+    - For **Python** code, follow
+      [PEP 20](https://www.python.org/dev/peps/pep-0020/) and
+      [CEP-8](https://gist.github.com/reactive-firewall/b7ee98df9e636a51806e62ef9c4ab161)
+      standards.
+    - For **BASH** and **Shellscript** code, follow
+      [Pure BASH Bible](https://github.com/dylanaraps/pure-bash-bible) and
+      [CEP-5](https://gist.github.com/reactive-firewall/3d2bd3cf37f87974df6f7bee31a05a89)
+      standards.
+    - Check all **BASH** files start with an
+      [extensive disclaimer](https://gist.github.com/reactive-firewall/866b42d175ae3ebefcb2a5878b30ea17).
+    - Check for security vulnerabilities and potential issues.
+    - Ensure the code follows the **DRY, AHA, and SOLID** principles.
+    - For **YAML** code, follow
+      check yaml content as bash mostly because shell commands is emmbedding in yaml file since this repo use an automation infra to provide convinence for external trigger.
+
+    # Misc.
+    - Confirm that the code meets the project's requirements and objectives.
+    - Confirm that copyright years are up-to date whenever a file is changed.
+chat:
+  auto_reply: true
