@@ -12,13 +12,13 @@ reviews:
     drafts: false
   instructions: >-
     # Code Review Instructions
-
     - Ensure code follows best practices and coding standards.
     - For **CPP** code, follow 
-      basic cpp programming standard
+      [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) and
+      [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
     - For **Python** code, follow
       [PEP 20](https://www.python.org/dev/peps/pep-0020/) and
-      [CEP-8](https://gist.github.com/reactive-firewall/b7ee98df9e636a51806e62ef9c4ab161)
+      [PEP 8](https://www.python.org/dev/peps/pep-0008/)
       standards.
     - For **BASH** and **Shellscript** code, follow
       [Pure BASH Bible](https://github.com/dylanaraps/pure-bash-bible) and
@@ -29,7 +29,8 @@ reviews:
     - Check for security vulnerabilities and potential issues.
     - Ensure the code follows the **DRY, AHA, and SOLID** principles.
     - For **YAML** code, follow
-      check yaml content as bash mostly because shell commands is emmbedding in yaml file since this repo use an automation infra to provide convinence for external trigger.
+      [YAML Best Practices](https://yaml.org/spec/1.2.2/) and ensure embedded shell commands follow proper bash syntax,
+      as these YAML files are used by our automation infrastructure to provide convenient external trigger interface.
 
     # Misc.
     - Confirm that the code meets the project's requirements and objectives.
