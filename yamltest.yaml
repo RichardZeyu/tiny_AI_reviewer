@@ -1,0 +1,21 @@
+Test:
+  setup: ~
+  steps: !!seq
+    - expected_returncode: 0
+      cmd: |
+              #Per bug 123, binary A and B should be run from version 5, otherwise skip
+              if [ $VERSION_NO -lt 5 ]; then
+                  echo "$VERSION_NO is before 5, there is no need to run"
+                  exit -1
+              else
+                  run.sh A
+              fi
+    - expected_returncode: 0
+      cmd: |
+              #Per bug 123, binary A and B should be run from version 5, otherwise skip
+              if [ $VERSION_NO -lt 10 ]; then
+                  echo "$VERSION_NO is before 5, there is no need to run"
+                  exit -1
+              else
+                  run.sh B
+              fi
