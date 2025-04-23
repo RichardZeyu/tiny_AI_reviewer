@@ -15,10 +15,13 @@ int main()
   auto res = add(1, 2);
   cout<<"res of add(1,2) is "<<res<<endl;
   
-  Foo *foo = new Foo;
-  if (foo == nullptr) 
+  // Make sure you have added:
+  // #include <memory>
+
+  auto foo = std::make_unique<Foo>();
+  if (!foo) 
   {
-    cout<<"Fail to allocate memory for Foo object!"<endl;
+    cout<<"Fail to allocate memory for Foo object!"<<endl;
   }
-  delete foo;
+  // No need for delete – memory is freed automatically
 }
